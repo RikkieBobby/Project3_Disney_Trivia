@@ -194,3 +194,26 @@ def display_leaderboard():
     for score in top_score[0:5]:
         print(f"{score[0]} : {score[1]}")
         print("-------------------")
+
+
+def start_game():
+
+    """
+    Function used to begin the game when called. In this function the questions are randomized
+    and score of 0 is set, a for loop is set and runs through the questions index and selects
+    10 questions. The display_quaestion presents the question, when the user enters their answer
+    the get_user_answer function is called and passed throught the validate_answer function with the 
+    with the questions list, if the user input is the same as the list index value, plus 1 is 
+    added to the score.
+    """
+    random.shuffle(questions)
+    score = 0
+    for index in range(0,10):
+        display_question(questions[index])
+        answer = get_user_answer()
+        is_valid = validate_answer(answer, questions[index])
+        if is_valid == True:
+            score = score + 1
+    save_user_score(user_name, score)
+    print(f"game over: Your score is {score}")
+    display_leaderboard()

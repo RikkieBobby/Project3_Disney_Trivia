@@ -185,3 +185,12 @@ def validate_answer(answer, question):
 
 def save_user_score(user_name, score):
     leaderboard.append_row([user_name, score])
+
+
+def display_leaderboard():
+    # https://stackoverflow.com/questions/3766633/how-to-sort-with-lambda-in-python
+    top_score = sorted(leaderboard.get_all_values()[1:], key=lambda x: int(x[1]), reverse=True)
+    print("------- Top Scores -------")
+    for score in top_score[0:5]:
+        print(f"{score[0]} : {score[1]}")
+        print("-------------------")

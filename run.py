@@ -19,7 +19,7 @@ def get_user_name():
 
         name = input("Enter your name here: ")
         if name.isalpha() and len(name) >= 3:
-            return name
+            return name.capitalize()
         else:
             print("Sorry, you must enter a name 3 letters long and only use letters, try again\n")
             continue        

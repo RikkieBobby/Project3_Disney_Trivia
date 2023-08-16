@@ -17,7 +17,7 @@ def get_user_name():
         print("The game will calculate your score as you play and display the final score at the end, let's see if you can make it to the top 5!")
         print("First, let's start by entering your name\n")
 
-        name = input("Enter your name here: ")
+        name = input("Enter your name here: \n")
         if name.isalpha() and len(name) >= 3:
             return name.capitalize()
         else:
@@ -44,7 +44,7 @@ def get_user_answer():
     statement will return asking for a valid option.
     """
     while True:
-        answer = input("Enter A, B, C or D   ")
+        answer = input("Enter A, B, C or D   \n")
         if answer.lower() in ["a", "b", "c", "d"]:
             return answer
         else:
@@ -118,7 +118,7 @@ if __name__ == "__main__":
     SHEET = GSPREAD_CLIENT.open("disney_trivia")
     leaderboard = SHEET.worksheet('leaderboard')
     user_name = get_user_name()
-    print(f"Great! Your name for the game will be {user_name}.")
+    print(f"Great! Your name for the game will be {user_name}.\n")
     questions = [
         {
             "question" : "What is the name of the toy store in Toy Story 2?",

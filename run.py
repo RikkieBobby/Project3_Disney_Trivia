@@ -144,3 +144,15 @@ print(f"Great! Your name for the game will be {user_name}.")
             "answer" : "C"
         }
     ]
+
+
+def display_question(question):
+    """
+    Function which passes through the 'question' argument of the list of dictionaries,
+    it displays the question to the user and the 4 available options to that question.
+    """
+    print(question["question"])
+    print(question["options"][0])
+    print(question["options"][1])
+    print(question["options"][2])
+    print(question["options"][3])

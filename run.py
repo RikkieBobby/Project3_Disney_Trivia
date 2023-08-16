@@ -156,3 +156,17 @@ def display_question(question):
     print(question["options"][1])
     print(question["options"][2])
     print(question["options"][3])
+
+
+def get_user_answer():
+    """
+    Function which collects the users answer input, it runs a while loop which takes a
+    user input of either "a", "b", "c" or "d", if the user enters any other value, a print
+    statement will return asking for a valid option.
+    """
+    while True:
+        answer = input("Enter A, B, C or D   ")
+        if answer.lower() in ["a", "b", "c", "d"]:
+            return answer
+        else:
+            print("Please choose one of the valid options")

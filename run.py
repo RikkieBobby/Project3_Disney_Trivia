@@ -181,3 +181,7 @@ def validate_answer(answer, question):
     if answer.lower() == question["answer"].lower():
         return True
     return False
+
+
+def save_user_score(user_name, score):
+    leaderboard.append_row([user_name, score])

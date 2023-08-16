@@ -2,18 +2,6 @@ import gspread
 from google.oauth2.service_account import Credentials
 import random
 
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
-
-    CREDS = Credentials.from_service_account_file('creds.json')
-    SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-    GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-    SHEET = GSPREAD_CLIENT.open("disney_trivia")
-    leaderboard = SHEET.worksheet('leaderboard')
-
 
 def get_user_name():
     """
@@ -75,10 +63,19 @@ def validate_answer(answer, question):
 
 
 def save_user_score(user_name, score):
+    """
+    Function used to save the users final score by adding their name and score to the 
+    leaderboard worksheet
+    """
     leaderboard.append_row([user_name, score])
 
 
 def display_leaderboard():
+    """
+    Function which displays the top 5 scores of the leaderboard at the end of thr program. 
+    It achieves this by accessing the number value from the leaderboard sheet and displays
+    the values in reverse form highest to lowest
+    """
     # https://stackoverflow.com/questions/3766633/how-to-sort-with-lambda-in-python
     top_score = sorted(leaderboard.get_all_values()[1:], key=lambda x: int(x[1]), reverse=True)
     print("------- Top Scores -------")
@@ -88,7 +85,6 @@ def display_leaderboard():
 
 
 def start_game():
-
     """
     Function used to begin the game when called. In this function the questions are randomized
     and score of 0 is set, a for loop is set and runs through the questions index and selects
@@ -106,7 +102,7 @@ def start_game():
         if is_valid == True:
             score = score + 1
     save_user_score(user_name, score)
-    print(f"game over: Your score is {score}")
+    print(f"game over: Your score is {score}\n")
     display_leaderboard()
 
 

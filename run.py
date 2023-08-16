@@ -170,3 +170,14 @@ def get_user_answer():
             return answer
         else:
             print("Please choose one of the valid options")
+
+
+def validate_answer(answer, question):
+    """
+    Function to validate the users answer, runs a single if statement that compares if 
+    the answer the user input is the same as the answer value in the questions dictioanry.
+    If correct returns true, and if not returns false.
+    """
+    if answer.lower() == question["answer"].lower():
+        return True
+    return False

@@ -19,8 +19,46 @@ def get_user_name():
     """
     while True:
         print(pyf.figlet_format("WELCOME TO THE DISNEY TRIVIA GAME!", font = "digital", justify='center'))
-        print("In this game you, the user, will answer a series of Disney based Trivia questions with a choice of answers\n")
-        print("The game will calculate your score as you play and display the final score at the end, let's see if you can make it to the top 5!\n")
+        instructions = """
+   _.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._
+
+.-'---      - ---     --     ---   -----   - --       ----  ----   -     ---`-.
+
+ )                                How To Play                                (
+
+(               I'ts quite simple really! You will be asked Disney            )
+
+ )               realted Trivia question with 4 answer options to            (
+
+(               choose from. Pay attention to the prompts, only a             )
+
+ )               valid answer can be given! Once you select your             (
+
+(                 answer hit enter and your choice will be saved.             )
+
+ )               There are 10 questions in total, once you finish            (
+
+(           the game will end and your score added to the leaderboard,        )
+
+ )                  lets see if you can make it to the top 5!                (
+
+(                                                                             )
+
+ )                                                                           (
+
+(___       _       _       _       _       _       _       _       _       ___)
+
+    `-._.-' (___ _) (__ _ ) (_   _) (__  _) ( __ _) (__  _) (__ _ ) `-._.-'
+
+            `-._.-' (  ___) ( _  _) ( _ __) (_  __) (__ __) `-._.-'
+
+                    `-._.-' (__  _) (__  _) (_ _ _) `-._.-'
+
+                            `-._.-' (_ ___) `-._.-'
+
+                                    `-._.-'
+"""
+        print(instructions)
         print("First, let's start by entering your name\n")
 
         name = input("Enter your name here: \n")
@@ -110,7 +148,7 @@ def start_game():
         if is_valid == True:
             score = score + 1
     save_user_score(user_name, score)
-    print(f"{Fore.red}game over: Your score is {score}\n")
+    print(f"{Fore.RED}game over: Your score is {score}\n")
     display_leaderboard()
 
 

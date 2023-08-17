@@ -1,5 +1,5 @@
 # Disney Trivia
-Disney Trivia is a simple game of Trivia designed to test the users knowledge on Disney Movies and TV shows. The user will be asked a series of Disney related questions where they will have several answers to choose from. Once the user has answered all questions the game will end and add their scores to the leaderboard. Only the top 5 scores will be displayed in the leaderboard however to add a competitive edge.
+Disney Trivia is a simple game of Trivia designed to test the user's knowledge of Disney Movies and TV shows. The user will be asked a series of Disney-related questions where they will have several answers to choose from. Once the user has answered all questions the game will end and add their scores to the leaderboard. Only the top 5 scores will be displayed in the leaderboard however to add a competitive edge.
 
 The live link can be found here - [Disney Trivia](https://disney-trivia-5fe4c14fdc49.herokuapp.com/)
 
@@ -7,7 +7,7 @@ The live link can be found here - [Disney Trivia](https://disney-trivia-5fe4c14f
 
 ## How to Play
 - Users will enter a name for themselves
-- Users will answer the questions display one after the other
+- Users will answer the questions displayed one after the other
 - Users score is saved to a linked spreadsheet
 - A leaderboard of the top 5 scores is displayed
 
@@ -28,7 +28,7 @@ The live link can be found here - [Disney Trivia](https://disney-trivia-5fe4c14f
 
 
 ## Logic Flow
-In order to visualise the flow of steps required in the game, I created a flow chart using Lucid Chart. It was beneficial for me to plan the project like this as it allowed me to gain an understanding of what functions were required for the game and at what stages and how the different elements of the game would interact.
+To visualize the flow of steps required in the game, I created a flow chart using Lucid Chart. It was beneficial for me to plan the project like this as it allowed me to gain an understanding of what functions were required for the game and at what stages and how the different elements of the game would interact.
 
 As the flow chart was created at the outset of the project, it does not fully reflect all elements of the game.
 
@@ -42,18 +42,18 @@ As the flow chart was created at the outset of the project, it does not fully re
 
 ![Welcome Screen](docs/readme_images/welcomescreen.png)
 
-- There is strong data validation on the username input. The user must enter a username consisting of letters only and must be 3 letters or more in lenght. They cannot just enter a blank space or other values. If they do not enter valid data, an error message will appear in red saying "Sorry, you must enter a name 3 letters long and only use letters, try again." and they will be asked to input their name again.
+- There is strong data validation on the username input. The user must enter a username consisting of letters only and must be 3 letters or more in length. They cannot just enter a blank space or other values. If they do not enter valid data, an error message will appear in red saying "Sorry, you must enter a name 3 letters long and only use letters, try again." and they will be asked to input their name again.
 
 ![Username Validation](docs/readme_images/usernameerror.png)
 
 ### The Game Loop
-- When the user enters their name the computer will welcome them to the game and repeat their name back to them, the name will also now be capitalized using the inbulit capitalize() function. 
+- When the user enters their name the computer will welcome them to the game and repeat their name back to them, the name will also now be capitalized using the inbuilt capitalize() function. 
 - From here the game will start
 
 ![Display Question](docs/readme_images/displayquestion.png)
 
-- It doesn't matter if their input is lower or upper case. The computer can handle both inputs by using the inbuilt function, lower().
-- If the user puts in anything other than 'a', 'b', 'c' or 'd', an error will print saying "Please choose one of the valid options" in red.
+- It doesn't matter if their input is lower or uppercase. The computer can handle both inputs by using the inbuilt function, lower().
+- If the user puts in anything other than 'a', 'b', 'c', or 'd', an error will print saying "Please choose one of the valid options" in red.
 - Once the user enters the valid option, the next question presents.
 
 ![Validation Error](docs/readme_images/answererror.png)
@@ -71,7 +71,7 @@ As the flow chart was created at the outset of the project, it does not fully re
 ![Google Sheet](docs/readme_images/googlesheet.png)
 
 - Credentials were generated and provided to allow access from the project to Google Sheets. These were added to the cred.json in the .gitignore file to ensure they weren't pushed to my Github repository. They also had to be added to the Config Vars on Heroku to ensure they could be accessed when running the game. 
-- The Leaderboard displays the top 5 scores. The scores are sorted using the inbulit sorted funtion with Lambda where the score colum is accessed  and presents its values reversed, with the highest at the stop and decending
+- The Leaderboard displays the top 5 scores. The scores are sorted using the inbuilt sorted function with Lambda where the score column is accessed  and presents its values reversed, with the highest at the stop and descending
 
 ![Leaderboard](docs/readme_images/topscores.png)
 
@@ -83,14 +83,14 @@ As the flow chart was created at the outset of the project, it does not fully re
 
 I tried to use the principles of object-orientated programming, however as the program was rather simplistic in nature there wasn't much necessity to combine any repeating functions, as each function only did one task.
 
-The functions in the program all fulfill a singular role and move onto the next sequence, the functions to play the game are all then called in a seperate function called start_game
+The functions in the program all fulfill a singular role and move on to the next sequence, the functions to play the game are all then called in a separate function called start_game
 
 Finally a if __name__ == "__main__": function is called at the end of the program with all the defined variables, the purpose of this function is to only run the code inside the if statement when the program is run directly by the Python interpreter. The code inside the if statement is not executed when the file's code is imported as a module.
 
 ## Testing
 
 ### PEP8 Testing
-The python files have all been passed through [PEP8 Online](https://pep8ci.herokuapp.com/). Any errors recorded in the validator where fixed after, see below:
+The Python files have all been passed through [PEP8 Online](https://pep8ci.herokuapp.com/). Any errors recorded in the validator were fixed after, see below:
 
 <details>
 
@@ -109,8 +109,8 @@ All user inputs were tested thoroughly to ensure all input data is handled corre
 - Username input: the username input was tested to ensure that the user cannot just input an empty space. The name input must consist of letters 3 or more. If the user does not enter valid data, an error message will appear saying that the name is not valid and they will be asked to input their name again.
 - Answer Input: The following testing was completed on the user answer input:
   - Checked that only answers that were valid options
-  - If invalid a print errors displays
-  - Asks for the user answer again
+  - If invalid a print error displays
+  - Asks the user to answer again
   - Moves to the next question if valid
 
 
@@ -124,7 +124,7 @@ The game was tested thoroughly to ensure the following features worked as intend
 
 All of the above tests were completed in my local terminal and also in the Heroku terminal.
 
-The README.md was passed through Grammarly and all links were checked before final submission
+The README.md was passed through Grammarly and all links were checked before the final submission
 
 ## Libraries and Technologies Used
 
@@ -134,7 +134,7 @@ The README.md was passed through Grammarly and all links were checked before fin
 - [gspread](https://pypi.org/project/gspread/): to allow communication with Google Sheets. 
 - [google.oauth2.service_account](https://google-auth.readthedocs.io/en/stable/index.html):  used to validate credentials and grant access to google service accounts. 
 - [pyfiglet](https://pypi.org/project/pyfiglet/0.7/) - for taking ASCII text and rendering it into ASCII art fonts.
-- [colorama](https://pypi.org/project/colorama/) - for adding colour to terminal text.
+- [colorama](https://pypi.org/project/colorama/) - for adding color to terminal text.
 
 ### Programs Used
 
@@ -142,26 +142,26 @@ The README.md was passed through Grammarly and all links were checked before fin
 - [Heroku](https://dashboard.heroku.com/apps) -  used to deploy the live project.
 - [Lucidchart](https://lucid.app/documents#/dashboard) -  used to create the game flowchart
 - [PEP8 Online](http://pep8online.com/) - used to validate all the Python code
-- [Grammerly](https://app.grammarly.com/) - used to proof read the README.md
+- [Grammerly](https://app.grammarly.com/) - used to proofread the README.md
 
 
 ## Known Bugs
 
-- As of this moment in time there are no known bugs in the programme
+- As of this moment in time there are no known bugs in the program
 
 ## Fixed Bugs
 
 ### Validate user answer error
 
-When testing the game early on, I noticed after the user entered their name, if they tried to enter an answer in lower case the terminal would return the value error. This was obviously unwanted as the user may enter the input but not progress, to solve this I added the .lower() function to the get user answer validate answer functions so the user could input either higher or lower case
+When testing the game early on, I noticed after the user entered their name, if they tried to enter an answer in lowercase the terminal would return the value error. This was obviously unwanted as the user may enter the input but not progress, to solve this I added the .lower() function to the get user answer to validate answer functions so the user could input either higher or lowercase
 
 ### save_user_score not functioning
 
-This was a simple fix, instead of passing the arguments for the user_name and score, I was origionally passing it the user_name and answer, once I realised the error I corrected immediately.
+This was a simple fix, instead of passing the arguments for the user_name and score, I was originally passing it the user_name and answer, once I realized the error I corrected it immediately.
 
 ### Gspread module not found
 
-This was a tricky one early on. when I would be working on the project, I found that if I pushed my changes and closed down, the next time I started the program I would recieve a error in the terminal saying the gspread module was not found. Wondering why I would try to reinstall the Gspread module in the terminal but still found there was an error. I later learned this was because my imports had not been added to the requirements.txt.
+This was a tricky one early on. when I would be working on the project, I found that if I pushed my changes and closed down, the next time I started the program I would receive an error in the terminal saying the gspread module was not found. Wondering why I would try to reinstall the Gspread module in the terminal but still found there was an error. I later learned this was because my imports had not been added to the requirements.txt.
 
 ## Deployment
 
@@ -171,7 +171,7 @@ Before deploying to Heroku pip3 freeze > requirements.txt was used to add all th
 
 The following steps were then taken:
 1. Log in to [Heroku](https://dashboard.heroku.com/apps) or create an account.
-2. On the main page click the button labelled New in the top right corner and from the drop-down menu select "Create New App".
+2. On the main page click the button labeled New in the top right corner and from the drop-down menu select "Create New App".
 3. Enter a unique and meaningful app name.
 4. Next select your region.
 5. Click on the Create App button.
@@ -204,7 +204,6 @@ The site is now live and operational.
 
 ## Acknowledgments
 
-The Code Institute slack community for their quick and helpful responces.
+The Code Institute Slack community for their quick and helpful responses.
 My mentor Antonio for having the patience of a saint and helping me each step of the way through the project.
 My family for their support while I undergo this journey.
-

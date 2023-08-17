@@ -6,9 +6,6 @@ import colorama
 from colorama import Fore, Style
 
 
-colorama.init(autoreset=True)
-
-
 def get_user_name():
     """
     gets the name from the user for the trivia game,
@@ -139,7 +136,6 @@ def display_leaderboard():
     value from the leaderboard sheet and displays
     the values in reverse form highest to lowest
     """
-    # https://stackoverflow.com/questions/3766633/how-to-sort-with-lambda-in-python
     top_score = sorted(
         leaderboard.get_all_values()[1:], key=lambda x: int(x[1]), reverse=True
         )
@@ -180,6 +176,7 @@ def start_game():
 
 
 if __name__ == "__main__":
+    colorama.init(autoreset=True)
     SCOPE = [
         "https://www.googleapis.com/auth/spreadsheets",
         "https://www.googleapis.com/auth/drive.file",

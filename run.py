@@ -1,6 +1,12 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import random
+import pyfiglet as pyf
+import colorama
+from colorama import Fore, Style
+
+
+colorama.init(autoreset=True)
 
 
 def get_user_name():
@@ -12,16 +18,16 @@ def get_user_name():
     the data again until the correct data is entered
     """
     while True:
-        print("Welcome to the Disney Trivia game!")
-        print("In this game you, the user, will answer a series of Disney based Trivia questions with a choice of answers")
-        print("The game will calculate your score as you play and display the final score at the end, let's see if you can make it to the top 5!")
+        print(pyf.figlet_format("WELCOME TO THE DISNEY TRIVIA GAME!", font = "digital", justify='center'))
+        print("In this game you, the user, will answer a series of Disney based Trivia questions with a choice of answers\n")
+        print("The game will calculate your score as you play and display the final score at the end, let's see if you can make it to the top 5!\n")
         print("First, let's start by entering your name\n")
 
         name = input("Enter your name here: \n")
         if name.isalpha() and len(name) >= 3:
             return name.capitalize()
         else:
-            print("Sorry, you must enter a name 3 letters long and only use letters, try again\n")
+            print(Fore.RED + "Sorry, you must enter a name 3 letters long and only use letters, try again\n")
             continue        
 
 
@@ -44,11 +50,13 @@ def get_user_answer():
     statement will return asking for a valid option.
     """
     while True:
-        answer = input("Enter A, B, C or D   \n")
+        answer = input(Fore.YELLOW + "Enter A, B, C or D   \n")
         if answer.lower() in ["a", "b", "c", "d"]:
             return answer
         else:
-            print("Please choose one of the valid options")
+            print(Fore.RED + "Please choose one of the valid options\n")
+
+    
 
 
 def validate_answer(answer, question):
@@ -78,7 +86,7 @@ def display_leaderboard():
     """
     # https://stackoverflow.com/questions/3766633/how-to-sort-with-lambda-in-python
     top_score = sorted(leaderboard.get_all_values()[1:], key=lambda x: int(x[1]), reverse=True)
-    print("------- Top Scores -------")
+    print(Fore.BLUE + "------- Top Scores -------")
     for score in top_score[0:5]:
         print(f"{score[0]} : {score[1]}")
         print("-------------------")
@@ -102,7 +110,7 @@ def start_game():
         if is_valid == True:
             score = score + 1
     save_user_score(user_name, score)
-    print(f"game over: Your score is {score}\n")
+    print(f"{Fore.red}game over: Your score is {score}\n")
     display_leaderboard()
 
 
@@ -118,7 +126,7 @@ if __name__ == "__main__":
     SHEET = GSPREAD_CLIENT.open("disney_trivia")
     leaderboard = SHEET.worksheet('leaderboard')
     user_name = get_user_name()
-    print(f"Great! Your name for the game will be {user_name}.\n")
+    print(f"{Fore.YELLOW}Great! Your name for the game will be {user_name}.\n")
     questions = [
         {
             "question" : "What is the name of the toy store in Toy Story 2?",

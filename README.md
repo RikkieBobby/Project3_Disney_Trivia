@@ -81,7 +81,7 @@ As the flow chart was created at the outset of the project, it does not fully re
 
 ## Data Model
 
-I tried to use the principles of object-orientated programming, however as the program was rather simplistic in nature there wasn't much necessity to combine any repeating functions, as each function only did one task.
+I tried to use the principles of object-orientated programming when creating the project, however as the program was rather simplistic in nature there wasn't much necessity to combine any repeating functions, as each function only did one task.
 
 The functions in the program all fulfill a singular role and move on to the next sequence, the functions to play the game are all then called in a separate function called start_game
 

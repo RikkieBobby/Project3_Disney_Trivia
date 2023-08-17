@@ -148,7 +148,8 @@ def start_game():
         if is_valid == True:
             score = score + 1
     save_user_score(user_name, score)
-    print(f"{Fore.RED}game over: Your score is {score}\n")
+    print(pyf.figlet_format(f"game over: Your score is {score}\n", font = "digital", justify='center'))
+    print(pyf.figlet_format("To Play Again, Simply Rerun The Program", font = "digital", justify='center'))
     display_leaderboard()
 
 

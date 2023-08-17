@@ -81,6 +81,11 @@ As the flow chart was created at the outset of the project, it does not fully re
 
 ## Data Model
 
+I tried to use the principles of object-orientated programming, however as the program was rather simplistic in nature there wasn't much necessity to combine any repeating functions, as each function only did one task.
+
+The functions in the program all fulfill a singular role and move onto the next sequence, the functions to play the game are all then called in a seperate function called start_game
+
+Finally a if __name__ == "__main__": function is called at the end of the program with all the defined variables, the purpose of this function is to only run the code inside the if statement when the program is run directly by the Python interpreter. The code inside the if statement is not executed when the file's code is imported as a module.
 
 ## Testing
 
@@ -190,11 +195,8 @@ The site is now live and operational.
 ### Resources Used
 - [W3Schools](https://www.w3schools.com/)  
 - [Stack Overflow](https://stackoverflow.com/)
-- [JavaPoint](https://7esl.com/5-letter-words/) - The list of five-letter words used in the game was taken from this site.
 - [List of Disney trivia questions](https://parade.com/1041219/alexandra-hurtado/disney-trivia) - I collected my trivia questions from this web post
 - [ASCII Art](https://www.asciiart.eu/art-and-design/borders) - I used this ASCII art for the border around the instructions.
-- [How to get current date and time in Python](https://www.programiz.com/python-programming/datetime/current-datetime) - I used this article to learn about the strftime() method when getting the date for my leaderboard.
-- [Pandas Sort: Your Guide to Sorting Data in Python](https://realpython.com/pandas-sort-python/) - I used this article to learn how to sort the leaderboard data for the table.
 - [Sorted function with Lambda](https://stackoverflow.com/questions/3766633/how-to-sort-with-lambda-in-python) - I used this article to learn how to use the sorted lambda function
 - [pyfiglet install](https://www.javatpoint.com/python-pyfiglet-module#:~:text=To%20install%20the%20pyfiglet%20module,pip%20install%20pyfiglet) - I used this site to learn about using the pyfiglet module for terminal fonts
 - I followed the steps in the Code Institute Python walkthrough project - Love Sandwiches when setting up my Google Sheets API.
@@ -202,5 +204,7 @@ The site is now live and operational.
 
 ## Acknowledgments
 
-The Code Institute slack community for their quick responses and very helpful feedback!
+The Code Institute slack community for their quick and helpful responces.
+My mentor Antonio for having the patience of a saint and helping me each step of the way through the project.
+My family for their support while I undergo this journey.
 

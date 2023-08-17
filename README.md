@@ -165,7 +165,7 @@ This was a tricky one early on. when I would be working on the project, I found 
 
 ## Deployment
 
-The site was deployed via [Heroku](https://dashboard.heroku.com/apps), and the live link can be found here: [Word-Py](https://word-py.herokuapp.com/)
+The site was deployed via [Heroku](https://dashboard.heroku.com/apps), and the live link can be found here: [Disney Trivia](https://disney-trivia-5fe4c14fdc49.herokuapp.com/)
 
 Before deploying to Heroku pip3 freeze > requirements.txt was used to add all the dependencies required to the requirements.txt file. This is required for the game to run on Heroku.
 

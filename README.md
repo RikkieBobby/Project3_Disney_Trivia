@@ -1,6 +1,8 @@
 # Disney Trivia
 Disney Trivia is a simple game of Trivia designed to test the user's knowledge of Disney Movies and TV shows. The user will be asked a series of Disney-related questions where they will have several answers to choose from. Once the user has answered all questions the game will end and add their scores to the leaderboard. Only the top 5 scores will be displayed in the leaderboard however to add a competitive edge.
 
+As this was my first encounter using a back-end program, the main purpose of this project was to help test my knowldge and skills from the course work before and see how well I could implement the different features of a back-end program. Continuing on I will likely come back to this project as a means of practicing my Python skills and improving my overall knowledge in the language.
+
 The live link can be found here - [Disney Trivia](https://disney-trivia-5fe4c14fdc49.herokuapp.com/)
 
 ![Site Mockup](docs/readme_images/mockup.png)

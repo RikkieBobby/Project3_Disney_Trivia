@@ -14,7 +14,7 @@ The live link can be found here - [Disney Trivia](https://disney-trivia-5fe4c14f
 - A leaderboard of the top 5 scores is displayed
 
 ## Site Owner Goals
-- To provide the user with a simple game that is both challenging and rewarding.
+- To provide the user with a simple game that is both fun and engaging.
 - To present the user with an app that functions well and is easy to use. 
 - To entice the user to return to the game to improve their score.
 
@@ -61,7 +61,7 @@ As the flow chart was created at the outset of the project, it does not fully re
 ![Validation Error](docs/readme_images/answererror.png)
 
 ### Game Over Menu
-- When the user completes the final question, the game ends a "game over" is printed
+- When the user completes the final question, the game ends and "game over" is printed
 - The user name and their final score is also printed 
 - The user is told they can then restart the game by running the function once more
 

@@ -1,9 +1,9 @@
 # Disney Trivia
 Disney Trivia is a simple game of Trivia designed to test the users knowledge on Disney Movies and TV shows. The user will be asked a series of Disney related questions where they will have several answers to choose from. Once the user has answered all questions the game will end and add their scores to the leaderboard. Only the top 5 scores will be displayed in the leaderboard however to add a competitive edge.
 
-The live link can be found here - [Disney Trivia]()
+The live link can be found here - [Disney Trivia](https://disney-trivia-5fe4c14fdc49.herokuapp.com/)
 
-![Site Mockup]()
+![Site Mockup](docs/readme_images/mockup.png)
 
 ## How to Play
 - Users will enter a name for themselves

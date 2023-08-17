@@ -3,17 +3,13 @@ Disney Trivia is a simple game of Trivia designed to test the users knowledge on
 
 The live link can be found here - [Disney Trivia]()
 
-![Site Mockup](docs/readme_images/web_mockup.png)
+![Site Mockup]()
 
 ## How to Play
-- The user has 6 chances to guess a random 5 letter word.
-- After each guess the user is provided with colour-coded blocks which let them know if their chosen letters are correct and in the right position;
-  - Green means that the letter is in the word and is in the correct position.
-  - Yellow means that the letter is in the word but is in the wrong position.
-  - Red means that the letter is not in the word. 
-- The user must guess carefully as their guess needs to be an actual word within the Oxford English Dictionary.
-- If the user guesses the correct word within 6 turns they have won the game. 
-- The user's score is saved to the leaderboard (only the top 10 scores are shown.)
+- Users will enter a name for themselves
+- Users will answer the questions display one after the other
+- Users score is saved to a linked spreadsheet
+- A leaderboard of the top 5 scores is displayed
 
 ## Site Owner Goals
 - To provide the user with a simple game that is both challenging and rewarding.
